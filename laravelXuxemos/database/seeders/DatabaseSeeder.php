@@ -1,22 +1,30 @@
 <?php
 
-namespace Database\Seeders;
+namespace App\Http\Middleware;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
+use Closure;
+use Illuminate\Http\Request;
 
-class DatabaseSeeder extends Seeder
+
+class cors
 {
     /**
-     * Seed the application's database.
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
+     * @return mixed
      */
-    public function run(): void
+    public function handle(Request $request, Closure $next)
     {
-        // \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+
+        return $next($request)
+        ->header('Access-Control-Allow-Origin', '*')
+        ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+        ->header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+
     }
+
 }
