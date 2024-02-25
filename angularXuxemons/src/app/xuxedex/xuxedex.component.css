@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .currentPage {
+    font-weight: bold;
+    font-size: large;
+  }
+  
+  .list-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: auto;
+    border: black 4px solid;
+  }
+  
+  /* .card{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  } */
+  
+  .card>img{
+    /* width: 50px; */
+    margin: auto;
+  }
+  
+  img{
+    width: 200px;
+  }
+  
+  .card-flex {
+    margin: 11px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: red 5px solid;
+  }
+  

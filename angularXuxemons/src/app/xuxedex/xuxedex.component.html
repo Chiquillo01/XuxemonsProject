@@ -1,0 +1,18 @@
+<br>
+<br>
+<h2>Xuxedex</h2>
+<div class="list-container">
+    <div class="card-flex" *ngFor="let card of cards">
+      <h5 class="card-title">{{ card.nombre }}</h5>
+      <img [src]="card.imagen" alt="{{ card.nombre }}">
+            <!-- Puedes agregar más detalles de la carta aquí si lo deseas -->
+      </div>
+    </div>
+
+  <!-- <div class="list-container">
+    <div *ngFor="let foto of fotos" class="card-flex">
+      <h1>{{foto.nombre}}</h1>
+      <img src="{{foto.imagen}}" alt="{{foto.nombre}}">
+    </div>
+  </div> -->
+  
